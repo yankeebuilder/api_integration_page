@@ -1,0 +1,23 @@
+{
+  "name": "api_integration_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yankeebuilder/api_integration_page.git"
+  },
+  "author": "ngdream",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yankeebuilder/api_integration_page/issues"
+  },
+  "homepage": "https://github.com/yankeebuilder/api_integration_page#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

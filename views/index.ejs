@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello from Render!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          disableForReducedMotion: true
+        });
+      }, 500);
+    </script>
+    <style>
+
+      *
+      {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: sans-serif;
+        
+      }
+      body {
+        background: #1A1A1A;
+        margin: 0;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+ 
+      }
+      a
+      {
+        text-decoration: none;
+      }
+      section {
+        border-radius: 1em;
+        margin: auto;
+ 
+        text-align: center;
+        width: 100%;
+        position: absolute;
+      }
+      h1
+      {
+        font-size: 2.1rem;
+        color: #eee;
+      }
+      h2
+      {
+        color: white;
+        margin: 20px 0;
+      }
+      h2,h1
+      {
+        font-weight: 300;
+
+      }
+      .opent
+      {
+color: black;
+background-color: aqua;
+padding: 15px 50px;
+display: inline-block;
+      }
+
+      @media only screen and (max-width: 600px) {
+        section
+        {
+          top:0;
+          padding:5px;
+        }
+        .opent
+        {
+width: 100%;
+        }
+  
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <h1>connect you to your github account with kiki</h1>
+      <h2>thanks </h2>
+
+      <a class="opent" href="https://t.me/ossmanager_bot?start=<%= token %>">open telegram</a>
+    </section>
+    <script>
+      var redirectToApp = function() {
+        window.location.replace("tg://resolve?domain=ossmanager_bot&start=<%= token %>");
+        setTimeout(function appNotInstalled() {
+          document.getElementById("container").style.display = "flex";
+        }, 2000);
+      };
+      window.onload = redirectToApp;
+          </script>
+  </body>
+</html>
